@@ -1,0 +1,161 @@
+/* ----------------------------------------------------
+   CONTAINER (placerer og centrerer popup-boksen)
+---------------------------------------------------- */
+/* FULD-SKÆRM CONTAINER + CENTRERING */
+#bellis-container {
+  position: fixed;          /* Sørger for, at containeren bliver på samme sted på skærmen, selv når man scroller */
+  inset: 0;               
+  display: flex;            /* Aktiverer flexbox, så man nemt kan centrere indholdet */
+  align-items: center;      /* Placerer popup’en midt på skærmen lodret */
+  justify-content: center;  /* Placerer popup’en midt på skærmen vandret */
+  z-index: 9999;            
+  pointer-events: none;     /* Gør at man ikke kan klikke på selve containeren, kun på elementer inde i den (min popup) */
+}
+
+/* ----------------------------------------------------
+   ØVERSTE KØRENDE BANNER (marquee-tekst)
+---------------------------------------------------- */
+#promotion-header {
+  width: 100%;               
+  background: #F4F2EA;           
+  border-bottom: 1px solid rgba(0,0,0,0.1); /* Tynd grå streg under teksten */
+  overflow: hidden;              /* Skjuler teksten, når den scroller ud af feltet */
+  margin-top: 1px;
+  margin-bottom: 10px;           /* Giver luft mellem banneret og næste element */
+}
+
+/* Wrapper omkring den bevægende tekst */
+.marquee {
+  overflow: hidden;  /* Skjuler alt udenfor visningsfeltet */
+  position: relative;
+}
+
+/* Selve tekstbåndet, der bevæger sig */
+.marquee__track {
+  display: flex;               /* Sætter teksten i en række */
+  gap: 2rem;                   /* Afstand mellem tekstblokke */
+  white-space: nowrap;         /* Sørger for teksten ikke brydes i linjer */
+  animation: marquee 12s linear infinite; /* Animation: scroller fra højre mod venstre */
+}
+
+/* Tekst-blokken inde i animationen */
+.marquee__block {
+  flex: 0 0 auto;              /* Forhindrer at blokken strækkes */
+  padding: 16px 0;
+  font-weight: 800;            
+  font-size: 28px;             
+  color: #BD3001;              
+}
+
+/* Animationen som får teksten til at bevæge sig fra højre → venstre */
+@keyframes marquee {
+  0%   { transform: translateX(0); }       /* Start: helt til højre */
+  100% { transform: translateX(-50%); }    /* Slut: flyttet halvdelen ud til venstre */
+}
+
+/* ----------------------------------------------------
+   SELVE POPUP-BOKSEN
+---------------------------------------------------- */
+.bellis-box {
+  position: relative;             /* Gør det muligt at placere elementer (som X-knap) relativt */
+  width: 550px;                   
+  background-color: #F4F2EA;   
+  border: 1px solid #BD3001;
+  border-radius: 18px;            
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35); /* Blød skygge for 3D-effekt */
+  pointer-events: all;            /* Popup’en kan klikkes på */
+  transition: transform 0.6s ease, opacity 0.6s ease !important; /* Glidende animationer */
+  padding: 40px 30px 60px;        /* Indvendig luft: top, sider, bund */
+  min-height: 700px;              /* Minimum højde – så den ikke klapper sammen */
+}
+
+/* ----------------------------------------------------
+   BILLEDET I POPUP’EN
+---------------------------------------------------- */
+.bellis-box img {
+  width: 500px;                   
+  margin: 30px auto;              
+  display: block;                 /* Gør at margin “auto” virker til centrering */
+}
+
+/* ----------------------------------------------------
+   TEKSTEN UNDER BILLEDET
+---------------------------------------------------- */
+.bellis-box p {
+  margin: 5px 2px;                
+  line-height: 1.5;               /* Gør teksten mere læsbar */
+  color: #BD3001;                
+  font-family: inherit;           
+  text-align: center;             
+}
+
+/* ----------------------------------------------------
+   CTA-KNAP ("Bliv en del af fællesskabet")
+---------------------------------------------------- */
+.button-holder {
+  margin-top: 30px;               
+  text-align: center;             
+}
+
+.button-holder button {
+  padding: 10px 20px;             
+  background: #BD3001;            
+  color: #F4F2EA;                 
+  border: none;                   /* Ingen kantlinje */
+  border-radius: 50px;            
+  cursor: pointer;                /* Gør markøren til hånd ved hover */
+}
+
+.button-holder button:hover {
+  background: #76250A;            /* Mørkere rød ved hover */
+}
+
+/* ----------------------------------------------------
+   LUKKEKNAPPEN (det lille X øverst i boksen)
+---------------------------------------------------- */
+.bellis-close-button {
+  position: absolute;             /* Placeres i forhold til .bellis-box */
+  top: 10px;                      
+  right: 10px;                    
+  cursor: pointer;                /* Markør bliver hånd */
+  font-size: 22px;                /* Størrelse på X’et */
+  color: #BD3001;                 
+}
+.bellis-close-button:hover {
+    color: #76250A;
+}
+/* ----------------------------------------------------
+   ANIMATION: Start skjult, derefter glid ned
+---------------------------------------------------- */
+
+/* Start-position (skjult over toppen af skærmen) */
+.slide-top {
+  transform: translateY(-150%) !important;
+  opacity: 0 !important;
+}
+
+/* Synlig position (glider ned på plads) */
+.slide-down {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+/* ----------------------------------------------------
+   MØRKT OVERLAY BAG POPUP
+---------------------------------------------------- */
+#popup-overlay {
+  position: fixed;                /* Dækker hele skærmen */
+  inset: 0;                       /* Top, bund, venstre, højre = 0 (fuld dækning) */
+  background: rgba(0, 0, 0, 0.45); /* Gennemsigtig sort baggrund */
+  backdrop-filter: blur(2px);     /* Lidt slør på baggrunden */
+  z-index: 9998;                  /* Ligger lige under popup-boksen */
+  opacity: 0;                     /* Starter usynlig */
+  transition: opacity 0.4s ease;  /* Glidende fade-effekt */
+  pointer-events: none;           /* Ikke klikbar, når skjult */
+}
+
+/* Når popup’en er aktiv → overlay vises */
+#popup-overlay.active {
+  opacity: 1;                     /* Gør overlay synligt */
+  pointer-events: all;            /* Gør det klikbart (så man fx kan lukke popup’en) */
+}
