@@ -19,16 +19,24 @@ Formålet med plugin’et er at skabe en visuel og interaktiv introduktion til B
 Mit plugin ligger i mappen:  
 `/wp-content/plugins/bellis_plugin/`
 
-Her har jeg samlet alle filer, der får plugin’et til at fungere.  
+Jeg har selv oprettet mapper til at organisere mit plugin bedre og gøre det nemmere at finde rundt i filerne.
+På den måde kan jeg holde PHP, CSS, JavaScript og billeder adskilt, så det hele er mere overskueligt.
+
 Mappen er bygget op sådan her:
 
 bellis_plugin/
-- img/ → indeholder billeder brugt i popup’en
-- index.php → hovedfilen med al PHP- og HTML-strukturen
-- script.js → JavaScript-filen, der styrer interaktivitet og animationstidspunkt
-- style.css → CSS-filen med layout, farver og animationer
+│
+├── css/              → Indeholder plugin’ets CSS-filer, hvor layout, farver og animationer styres
+│
+├── js/               → Indeholder JavaScript-filer, som styrer popup’ens interaktive funktioner og timing
+│
+├── img/              → Indeholder billeder brugt i popup’en, fx illustrationer eller grafik
+│
+└── index.php         → Hovedfilen, der samler hele plugin’et. 
+                        Her ligger al PHP- og HTML-strukturen, samt registreringen af shortcodes og scripts
 
-Jeg har valgt at strukturere plugin’et på denne måde, fordi det giver et tydeligt overblik over, hvad der styrer hvad.  
+Jeg har valgt at bygge plugin’et op på den måde, fordi det giver et tydeligt overblik over, hvad der styrer hvad,
+og det gør det meget nemmere at finde og rette i de rigtige filer senere.
 
 
 ## HTML og PHP 
