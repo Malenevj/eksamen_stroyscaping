@@ -25,15 +25,14 @@ På den måde kan jeg holde PHP, CSS, JavaScript og billeder adskilt, så det he
 Mappen er bygget op sådan her:
 
 bellis_plugin/
-│
-├── css/              → Indeholder plugin’ets CSS-filer, hvor layout, farver og animationer styres
-│
-├── js/               → Indeholder JavaScript-filer, som styrer popup’ens interaktive funktioner og timing
-│
-├── img/              → Indeholder billeder brugt i popup’en, fx illustrationer eller grafik
-│
-└── index.php         → Hovedfilen, der samler hele plugin’et. 
-                        Her ligger al PHP- og HTML-strukturen, samt registreringen af shortcodes og scripts
+-  css/ Indeholder plugin’ets CSS-filer, hvor layout, farver og animationer styres
+
+-  js/ Indeholder JavaScript-filer, som styrer popup’ens interaktive funktioner og timing
+
+-  img/ Indeholder billeder brugt i popup’en, fx illustrationer eller grafik
+  
+-  index.php Hovedfilen, der samler hele plugin’et. 
+                 
 
 Jeg har valgt at bygge plugin’et op på den måde, fordi det giver et tydeligt overblik over, hvad der styrer hvad,
 og det gør det meget nemmere at finde og rette i de rigtige filer senere.
