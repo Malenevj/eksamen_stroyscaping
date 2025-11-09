@@ -329,5 +329,22 @@ Undervejs justerede jeg layout, farver og typografi for at skabe bedre balance o
 For at sikre kvaliteten af min kode har jeg valideret min CSS ved hjælp af W3C CSS Validatoren (Jigsaw). Resultatet viste, at der ikke var nogen fejl i min CSS.
 ![css_validering](validering.png)
 
+
+### Validering af JS
+
+Jeg har valideret min JavaScript ved hjælp af browserens konsollen 
+
+Konsollen viser ingen fejl eller advarsler, hvilket betyder, at min JavaScript fungerer korrekt, og at der ikke er problemer med syntaksen eller funktionerne i koden.
+
+På billedet kan man se beskeden:
+
+![js_validering](validering_js.png)
+
+Denne besked kommer fra WordPress, som automatisk indlæser jQuery Migrate.
+Det bruges til at sikre, at ældre jQuery-kode stadig fungerer.
+
+Da jeg har skrevet min kode i ren (vanilla) JavaScript, er denne besked ikke en fejl, men blot information om, at WordPress har jQuery aktiveret i baggrunden.
+Min egen kode kører helt som den skal uden fejl og uden afhængighed af jQuery.
+
 ##  Min popup
 ![Mit_billede_til_popup](cover_billede.png)
