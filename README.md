@@ -312,6 +312,30 @@ så kalder den funktionen bellis_popup_box(), som indeholder hele HTML-strukture
 På den måde bliver alt det, jeg har bygget både HTML, CSS og JavaScript
 automatisk hentet og vist det rigtige sted på hjemmesiden.
 
+**Guide til aktivering af Bellis Popup Plugin**
+
+Download plugin-koden fra mit GitHub repository.
+
+Hvis filen bliver hentet som en ZIP-fil, skal den pakkes ud på din computer.
+
+Upload den udpakkede mappe med navnet bellis_plugin til WordPress-mappen:
+
+wp-content/plugins
+
+
+(Dette kan fx gøres via FileZilla eller dit webhotels filhåndtering.)
+
+Log ind på din WordPress-side, gå til Plugins → Installed Plugins,
+og aktiver plugin’et med navnet Bellis Popup.
+
+Opret en ny side, eller vælg en eksisterende side, hvor du vil vise popup’en.
+Indsæt min shortcode i teksteditoren dér, hvor popup’en skal vises:
+
+[bellis_popup]
+
+
+Klik på “Opdater” eller “Udgiv”, og vis siden i din browser for at se popup’en i funktion
+
 ![shortcode](shortcode.png)
 
 ##  Skitser 
