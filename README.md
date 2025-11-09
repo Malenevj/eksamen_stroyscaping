@@ -70,7 +70,7 @@ function bellis_popup_box() {
     $content = '';
   ```
 
-Derefter starter jeg med at lave en <div> til det mørke baggrundslag, som dæmper resten af siden, når popup’en vises.
+Derefter starter jeg med at lave en div til det mørke baggrundslag, som dæmper resten af siden, når popup’en vises.
 ```php
     // Mørkt overlay der dækker baggrunden
     $content .= '<div id="popup-overlay"></div>';
