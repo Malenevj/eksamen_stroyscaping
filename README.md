@@ -1,4 +1,7 @@
-# Bellis Plugin
+# Malene´s Bellis Plugin
+Beksrivelse: pluginet er lavet som en pop-up med tegnede illustationer, overlay, tekst og cta knap 
+Version: 0.5 
+Forfatter: Malene Jonassen
 
 ## Formålet med plugin’et
 
