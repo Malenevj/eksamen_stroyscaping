@@ -121,7 +121,7 @@ Så har vi selve popup-boksen, som indeholder
 Det er fordi jeg tilsidst sender alt HTML-indholdet tilbage til WordPress, så det kan vises dér, hvor shortcoden [bellis_popup] bliver brugt.
 
 
-Grunden til, at jeg bruger ( .= ) efter hvert sted hvor der står content, er fordi at det betyder at jeg tilføjernyt indhold til $content i stedet for at overskrive det, jeg allerede har skrevet.
+Grunden til, at jeg bruger ( .= ) efter hvert sted hvor der står content, er fordi at det betyder at jeg tilføjer nyt indhold til $content i stedet for at overskrive det, jeg allerede har skrevet.
 
 I min PHP-fil har jeg også tilføjet mange kommentarer, så jeg hele tiden kan huske, hvad hver del gør.
 Det gør det nemt for mig at arbejde videre senere, uden at glemme, hvordan koden hænger sammen.
