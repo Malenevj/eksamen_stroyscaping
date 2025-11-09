@@ -294,7 +294,7 @@ For at vise mit plugin i **WordPress** har jeg lavet en shortcode, som hedder:
 
 [bellis_popup]
 
-For at få den til at fungere går jeg ind på den side i WordPress, hvor jeg vil vise popup’en,og indsætter shortcoden direkte i teksteditoren.  
+For at få den til at fungere går jeg ind på den side i WordPress, hvor jeg vil vise popup’en, og indsætter shortcoden direkte i teksteditoren.  
 
 Når WordPress ser shortcoden, henter den automatisk alt det indhold, jeg har bygget i mit plugin.  
 Det gør det nemt at placere popup’en præcis der, hvor jeg ønsker den på siden.
