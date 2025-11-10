@@ -1,9 +1,11 @@
 <?php
 /*
  * Plugin Name: bellis plugin
+ * Plugin URI: https://github.com/Malenevj/eksamen_storyscaping
  * Description: Popup med kørende slogan-bånd øverst og mørk baggrund (overlay).
  * Version: 0.5
  * Author: Malene Jonassen
+ * Author URI: https://portfolio.mjwebdesigns.dk/test-pop-up/
  * License: GPL2
  */
 
